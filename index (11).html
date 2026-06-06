@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Pribadi Fazil</title>
+    <style>
+        /* Desain Tema Hitam Putih */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Gaya Fitur AI Gemini */
+        .ai-section {
+            border: 2px solid #000000;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .ai-output {
+            border: 1px dashed #000000;
+            padding: 15px;
+            min-height: 50px;
+            background-color: #fafafa;
+            font-style: italic;
+        }
+
+        /* Gaya Tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 2px 2px 0px #000000;
+        }
+
+        th, td {
+            border: 2px solid #000000;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Credit Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-top: 1px solid #000000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Catatan Pribadi & Informasi</h1>
+    </header>
+
+    <!-- Fitur AI Gemini -->
+    <section class="ai-section">
+        <h2>Gemini AI Feature</h2>
+        <p>Pilih perintah di bawah ini untuk dijawab oleh Gemini AI:</p>
+        <div class="btn-group">
+            <button onclick="tanyaGemini('sistem')">Sistem Web</button>
+            <button onclick="tanyaGemini('suka')">Hal Yang Saya Suka</button>
+        </div>
+        <div class="ai-output" id="geminiResponse">
+            <em>Respon AI akan muncul di sini...</em>
+        </div>
+    </section>
+
+    <!-- Tabel 1: Profil Utama -->
+    <h2>Biodata Diri</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%;">No</th>
+                <th style="width: 30%;">Kategori</th>
+                <th>Informasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Nama</td><td>Fazil vanarlan</td></tr>
+            <tr><td>2</td><td>Pembuat Web</td><td>Fazil vanarlan</td></tr>
+            <tr><td>3</td><td>Tempat Tinggal</td><td>Di kampung tua teluk mata ikan Batam RT 4</td></tr>
+            <tr><td>4</td><td>Gender</td><td>Laki-laki</td></tr>
+            <tr><td>5</td><td>Hal yang disukai</td><td>Suka bermain game dan melakukan aktifitas di dalam rumah</td></tr>
+            <tr><td>6</td><td>Kegiatan</td><td>Saya jarang melakukan kegiatan karna saya introvert dan jarang keluar rumah</td></tr>
+            <tr><td>7</td><td>Ada Adek</td><td>Ada, bernama Zielo vanarlan</td></tr>
+            <tr><td>8</td><td>Hobi</td><td>Suka memasak dan berenang walaupun jarang</td></tr>
+            <tr><td>9</td><td>Jago di bidang apa</td><td>Jago di bidang teknologi informasi komputer</td></tr>
+            <tr><td>10</td><td>Warna Favorite</td><td>Biru dan merah</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Tabel 2: Game & Pertemanan -->
+    <h2>Preferensi Game & Sosial</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%;">No</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Game paling suka dimainkan adalah Roblox dan Minecraft.</td></tr>
+            <tr><td>2</td><td>Saya suka berteman bersama cwek dan cwok sesuai mood.</td></tr>
+            <tr><td>3</td><td>Temman terbanyak biasanya cewek jika di dalam game, tapi di real life cowok.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Tabel 3: Preferensi Cowok Feminim -->
+    <h2>Hal yang Biasanya Disukai Cowok (Terutama Sedikit Feminim)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%;">No</th>
+                <th style="width: 35%;">Aspek/Kategori</th>
+                <th>Hal yang Disukai / Karakteristik</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Perawatan Diri (Skincare)</td><td>Menjaga kebersihan kulit wajah dan tubuh agar tetap bersih dan rapi.</td></tr>
+            <tr><td>2</td><td>Gaya Busana (Fashion)</td><td>Menyukai pakaian yang aesthetics, bersih, rapi, dengan warna-warna soft atau netral (seperti pastel, putih, krem).</td></tr>
+            <tr><td>3</td><td>Aktivitas Rumah/Hobi</td><td>Suka memasak, baking, menata kamar (aesthetic room), atau melakukan hobi yang tenang di dalam rumah.</td></tr>
+            <tr><td>4</td><td>Sifat & Komunikasi</td><td>Cenderung lebih peka, empati tinggi, ekspresif dalam berbicara, dan menyukai obrolan yang mendalam (deep talk).</td></tr>
+            <tr><td>5</td><td>Hewan Peliharaan</td><td>Seringkali menyukai hewan yang lucu dan menggemaskan seperti kucing atau kelinci.</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Credit Section -->
+    <footer>
+        <p>Created with Credit to: C00LK1NG</p>
+    </footer>
+
+</div>
+
+<script>
+    // Logika Simulasi Respon AI Gemini
+    function tanyaGemini(fitur) {
+        const output = document.getElementById('geminiResponse');
+        
+        if (fitur === 'sistem') {
+            output.innerHTML = "<strong>Gemini AI:</strong> Web ini dibuat dan dirancang khusus berfungsi untuk menyimpan seluruh catatan pribadi saya secara aman, rapi, dan terstruktur.";
+        } else if (fitur === 'suka') {
+            output.innerHTML = "<strong>Gemini AI:</strong> Hal yang saya suka adalah memberikan informasi edukatif serta mendalam mengenai berbagai tools, script, atau exploiter yang ada di dalam platform Roblox.";
+        }
+    }
+</script>
+
+</body>
+</html>
